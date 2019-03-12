@@ -1,36 +1,25 @@
 {
-  "pde_types" : [
-    "/location", Noun
-    "/location/address" Noun,
-    "/location/city" Noun,
-    "/location/zipcode" Noun,
-    "/finance/credit_score" Noun ,
-    "/contact/name" Noun ,
-    "/contact/email_address" Noun,
-    "/contact/phonenumber" Noun ,
-    "/id/account_number" Noun,
-    "/id/us_social_security_number" Noun,
-    "/id/credit_card_number" Noun,
-    "/interest/product" Noun,
-    "/bio/age" Noun,
-    "/profession/job_title" Noun,
-    "/other/number" Noun,
-    "/other/datetime" Noun,
-    "/other/datetime/date" Noun,
-    "/other/datetime/month" Noun,
-    "/other/datetime/year" Noun,
-    "/other/organization" Noun,
-    "/other/organization/company" Noun
+  "pde_types": [
+    "/location",
+    "/location/address",
+    "/location/city",
+    "/location/zipcode",
+    "/finance/credit_score",
+    "/contact/name",
+    "/contact/email_address",
+    "/contact/phonenumber",
+    "/id/account_number",
+    "/id/us_social_security_number",
+    "/id/credit_card_number",
+    "/interest/product",
+    "/bio/age",
+    "/profession/job_title",
+    "/other/number",
+    "/other/datetime",
+    "/other/datetime/date",
+    "/other/datetime/month",
+    "/other/datetime/year",
+    "/other/organization",
+    "/other/organization/company"
   ]
 }
-
-Noun (Name place animal thing)
-Pronound (Replace Noun, he she it)
-adj (describtion)
-Verb (action )
-adverb (describtion plus action)
-Preposition
-
-Raman is flying kite
-Subject Verb Object
-
