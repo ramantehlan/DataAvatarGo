@@ -39,12 +39,13 @@ Write about usage here
 │   ├── all_pde_types.json
 │   ├── dataset.json
 │   ├── documents.json
+│   ├── sliceDataset.json
+│   ├── sliceSampleSubmitFile.json
 │   └── types.json
 ├── DataAvatarGo
-├── submission.json
-├── main.go
-├── jsonStruct.go
 ├── jsonLib.go
+├── jsonStuct.go
+├── main.go
 └── README.md
 ```
 
@@ -60,6 +61,8 @@ No | File/Folder Name | Purpose |
 8 | `main.go` | Main file for the program
 9 | `jsonStruct.go` | It holds the struct used for json reading and writing
 10 | `jsonLib.go` | It holds all the functions used for json parsing and writing
+11 | `sliceDataset.json` | Just for testing
+12 | `sliceSampleSubmitFile.json` | Just for testing
 
 ## Why Go Language?
 
