@@ -1,0 +1,29 @@
+{
+  "your_team_name": [
+    {
+      "text": "Let me explain to you why I believe this : For years, SunTrust advertised and promoted in big letters their entity_1 debit card.",
+      "entity": "entity_1",
+      "types": "/other/datetime/date /other/datetime/month"
+    },
+    {
+      "text": "With that card, an account holder could earn entity_2 mile for every {$1.00} spent ( for debit and credit card transactions ).",
+      "entity": "entity_2",
+      "types": "/location/address"
+    },
+    {
+      "text": "Over the past entity_3 months, SunTrust must have reviewed their debit card portfolio and what they did as a result of their review is shocking : They closed all account holders who had earned above average number of miles regardless of the types of products they purchased, regardless of the length of their relationship with SunTrust, and regardless of the amount of money in their checking accounts.",
+      "entity": "entity_3",
+      "types": "/other/datetime"
+    },
+    {
+      "text": "After banking with Citibank for over 3 years, I discovered this evening that I could not use my debit card despite having a Citibank verified balance of {$900.00}. When I called Citibank, I was informed that the Texas branches had been bought by entity_4 and as such, they, Citibank, could not allow access to my account.",
+      "entity": "entity_4",
+      "types": "/other/datetime/month /profession/job_title"
+    },
+    {
+      "text": "I used to work for theentity_5 and they call their customers because a {$1.00} coffee.",
+      "entity": "entity_5",
+      "types": "/other/organization /contact/phonenumber"
+    }
+    ]
+    }
