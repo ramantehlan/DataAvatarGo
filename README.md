@@ -41,7 +41,7 @@ Write about usage here
 │   ├── documents.json
 │   └── types.json
 ├── DataAvatarGo
-├── hello.go
+├── main.go
 └── README.md
 ```
 
@@ -63,7 +63,7 @@ There are many reasons to use `Go Lang` as a language of choice, some of the imp
 
 Go is built with keeping concurrency in mind. Go has goroutines instead of threads which is not just fast in starting up, but use less memory.
 
-## Binary Code
+#### Binary Code
 	
 Go is compiled and not interpreted, so it runs directly on underlying hardware.
 
@@ -83,7 +83,11 @@ You may find many of the features crucial, but you can still code your applicati
 
 ## Resources 
 
+- [jdkato/prose](https://github.com/jdkato/prose)
+- [Prodigy prose radically efficient machine teaching in go](https://medium.com/@jdkato/prodigy-prose-radically-efficient-machine-teaching-in-go-93389bf2d772)
+- [Workflow named entity recognition](https://prodi.gy/docs/workflow-named-entity-recognition)
 - [Why should you learn go](https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65)
+
 
 ## License 
 
