@@ -12,18 +12,17 @@ After **Data Protection Regulations** like [GDPR](https://www.google.com/url?q=h
 
 A algorithm to automatically impute values for the redacted portions in a text, which are known to have contained Personal Data Entities (PDEs), then we can protect the PDEs.
 
+**Final Json File: `submission.json`**
+
 #### Pseudo code
 
 ```
-
-...
-
+Not yet added
 ```
-
 
 ## Usage
 
-Write about usage here
+`Not yet decided`
 
 ## Pre-Requisites
 
@@ -92,6 +91,8 @@ You may find many of the features crucial, but you can still code your applicati
 
 ## Resources
 
+- [IIM Ahmedabad’s second hackathon](https://sites.google.com/iimahd.ernet.in/hackathon-icadabai2019/home)
+- [GDPR](https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGeneral_Data_Protection_Regulation&sa=D&sntz=1&usg=AFQjCNFZDoQ-bJV5QtpyAldQEG1GWL5l3w)
 - [jdkato/prose](https://github.com/jdkato/prose)
 - [Prodigy prose radically efficient machine teaching in go](https://medium.com/@jdkato/prodigy-prose-radically-efficient-machine-teaching-in-go-93389bf2d772)
 - [Workflow named entity recognition](https://prodi.gy/docs/workflow-named-entity-recognition)
@@ -100,4 +101,4 @@ You may find many of the features crucial, but you can still code your applicati
 
 ## License
 
-Not yet decided
+`Not yet added`
