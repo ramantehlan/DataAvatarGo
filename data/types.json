@@ -1,5 +1,5 @@
 {
-  "pde_types": [
+  "data": [
     "/location",
     "/location/address",
     "/location/city",
