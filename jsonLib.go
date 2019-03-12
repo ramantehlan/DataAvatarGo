@@ -35,3 +35,10 @@ func ByteToJson(byteData []byte) InputData{
 	HandleError(err, "There was an error decoding the json.")
 	return jsonData
 }
+
+// This is to create a json file
+func CreateJson(newData []Output) {
+	file, _ := json.MarshalIndent(OutputData{newData}, "", " ")
+	_ = ioutil.WriteFile(submissionFileLoc, file, 0644)
+	fmt.Printf("%+v", newData)
+}
