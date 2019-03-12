@@ -10,7 +10,7 @@ After **Data Protection Regulations** like [GDPR](https://www.google.com/url?q=h
 
 #### Solution
 
-A algorithm to automatically impute values for the redacted portions in a text, which are known to have contained Personal Data Entities (PDEs), then we can protect the PDEs. 
+A algorithm to automatically impute values for the redacted portions in a text, which are known to have contained Personal Data Entities (PDEs), then we can protect the PDEs.
 
 #### Pseudo code
 
@@ -25,7 +25,7 @@ A algorithm to automatically impute values for the redacted portions in a text, 
 
 Write about usage here
 
-## Pre-Requisites 
+## Pre-Requisites
 
 - Go Lang
 - Terminal
@@ -43,6 +43,8 @@ Write about usage here
 ├── DataAvatarGo
 ├── submission.json
 ├── main.go
+├── jsonStruct.go
+├── jsonLib.go
 └── README.md
 ```
 
@@ -56,17 +58,19 @@ No | File/Folder Name | Purpose |
 6 | `all_pde_types.json` | All the provided PDEs types
 7 | `README.md` | Current file you are reading
 8 | `main.go` | Main file for the program
+9 | `jsonStruct.go` | It holds the struct used for json reading and writing
+10 | `jsonLib.go` | It holds all the functions used for json parsing and writing
 
 ## Why Go Language?
 
-There are many reasons to use `Go Lang` as a language of choice, some of the important ones are mentioned below. 
+There are many reasons to use `Go Lang` as a language of choice, some of the important ones are mentioned below.
 
 #### Concurrency
 
 Go is built with keeping concurrency in mind. Go has goroutines instead of threads which is not just fast in starting up, but use less memory.
 
 #### Binary Code
-	
+
 Go is compiled and not interpreted, so it runs directly on underlying hardware.
 
 #### Maintainable - Reliable - Scalable
@@ -83,7 +87,7 @@ Go is one of the easiest language to learn, with simple and clean syntax. Though
 You may find many of the features crucial, but you can still code your application in go, with few extra lines. That will not just make you code more clean, but more easy to understand. Go is a statically typed and compiled, which makes it reliable and scalable.
 
 
-## Resources 
+## Resources
 
 - [jdkato/prose](https://github.com/jdkato/prose)
 - [Prodigy prose radically efficient machine teaching in go](https://medium.com/@jdkato/prodigy-prose-radically-efficient-machine-teaching-in-go-93389bf2d772)
@@ -91,6 +95,6 @@ You may find many of the features crucial, but you can still code your applicati
 - [Why should you learn go](https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65)
 
 
-## License 
+## License
 
 Not yet decided
