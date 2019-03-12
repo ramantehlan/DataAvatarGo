@@ -38,7 +38,8 @@ func ByteToJson(byteData []byte) InputData{
 
 // This is to create a json file
 func CreateJson(newData []Output) {
-	file, _ := json.MarshalIndent(OutputData{newData}, "", " ")
-	_ = ioutil.WriteFile(submissionFileLoc, file, 0644)
-	fmt.Printf("%+v", newData)
+	file, err := json.MarshalIndent(OutputData{newData}, "", " ")
+	HandleError(err, "Unable to marshal")
+	err = ioutil.WriteFile(submissionFileLoc, file, 0644)
+	HandleError(err, "Unable to create a file")
 }

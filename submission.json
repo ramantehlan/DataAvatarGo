@@ -8,7 +8,7 @@
   {
    "text": "With that card, an account holder could earn XXXX mile for every {$1.00} spent ( for debit and credit card transactions ).",
    "entity": "Entity",
-   "types": "Types"
+   "types": ""
   },
   {
    "text": "Over the past XXXX months, SunTrust must have reviewed their debit card portfolio and what they did as a result of their review is shocking : They closed all account holders who had earned above average number of miles regardless of the types of products they purchased, regardless of the length of their relationship with SunTrust, and regardless of the amount of money in their checking accounts.",
@@ -23,17 +23,17 @@
   {
    "text": "I used to work for the XXXX XXXX XXXX XXXX and they call their customers because a {$1.00} coffee.",
    "entity": "Entity",
-   "types": "Types"
+   "types": "/other/organization /other/organization/company"
   },
   {
    "text": "After that call she informed me that the bank had a policy of not exchanging XXXX with a value of less than {$100.00} U.S.",
    "entity": "Entity",
-   "types": "Types"
+   "types": ""
   },
   {
    "text": "In response, I told this associate that I inquired about returning XXXX when I picked it up, and no one told me about this requirement.",
    "entity": "Entity",
-   "types": "Types"
+   "types": ""
   },
   {
    "text": "He told me that he checked out my exchange issue, and found that PNC had a policy of not exchanging XXXX with a value of less than {$100.00} U.S., and they could not make exceptions to this policy.",
@@ -43,7 +43,7 @@
   {
    "text": "I told XXXX that I viewed this failure as additional negligence on the part of the bank.",
    "entity": "Entity",
-   "types": "Types"
+   "types": ""
   }
  ]
 }

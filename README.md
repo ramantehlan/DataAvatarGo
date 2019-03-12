@@ -44,6 +44,7 @@ Not yet added
 ├── DataAvatarGo
 ├── jsonLib.go
 ├── jsonStuct.go
+├── genLib.go
 ├── main.go
 └── README.md
 ```
@@ -62,6 +63,7 @@ No | File/Folder Name | Purpose |
 10 | `jsonLib.go` | It holds all the functions used for json parsing and writing
 11 | `sliceDataset.json` | Just for testing
 12 | `sliceSampleSubmitFile.json` | Just for testing
+13 | `genLib.go` | Contains the general functions
 
 ## Why Go Language?
 

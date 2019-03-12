@@ -12,6 +12,7 @@ package main
 import (
 	"fmt"
 	"gopkg.in/jdkato/prose.v2"
+	"regexp"
 )
 
 var dataFileLoc string = "data/sliceDataset.json"
@@ -25,20 +26,45 @@ func main() {
 	// Step 1: Read the input json file
 	// conver to the byte code
 	dataset := ReadJson(dataFileLoc)
-	//types := ReadJson(typeFileLoc)
+	types := ReadJson(typeFileLoc)
 	var s []Output
+	patterns := []string {
+											"XXXX XXXX XXXX XXXX",
+										  "XXXX XXXX XXXX",
+										  "XXXX XXXX'",
+										  "XXXX",
+										  "XX/XX/XXXX",
+										  "XX/XX/",}
 
 	for i := 0; i < len(dataset.Data); i++ {
-		var obj Output
+			var obj Output
 			entry := dataset.Data[i]
+
+			var re = regexp.MustCompile(`XXXX`)
+			replace := re.ReplaceAllString(entry, `YYYYYYYYYYYYY`)
+
 			doc, _ := prose.NewDocument(entry)
 	 		for _, ent := range doc.Entities() {
-			 fmt.Println(ent.Text, ent.Label)
-	 		}
 
-			obj.Text = dataset.Data[i]
+			 if InArray(ent.Text, patterns) {
+				 switch ent.Label {
+				 case "PERSON":
+					 	obj.Types = types.Data[5]
+				 case "ORGANIZATION":
+					 obj.Types = types.Data[19] + " " + types.Data[20]
+				 case "GPE":
+					 obj.Types = types.Data[19] + " " + types.Data[20]
+				 }
+
+
+			 }else{
+				  obj.Types = "Types"
+			 }
+
+			}
+
+			obj.Text = replace
 			obj.Entity = "Entity"
-			obj.Types = "Types"
 
 			s = append(s, obj)
 	}
