@@ -12,61 +12,71 @@ package main
 import (
 	"fmt"
 	"gopkg.in/jdkato/prose.v2"
-	"regexp"
+	"math/rand"
+	"time"
 )
 
-var dataFileLoc string = "data/sliceDataset.json"
+var dataFileLoc string = "data/dataset.json"
 var typeFileLoc string = "data/types.json"
 var submissionFileLoc string = "submission.json"
 
 func main() {
+	start := time.Now()
+	defer fmt.Println(time.Since(start))
 	fmt.Println("DataAvatarGo Started!\n")
 	defer fmt.Println("\nDataAvatarGo Ending!")
 
 	// Step 1: Read the input json file
 	// conver to the byte code
-	dataset := ReadJson(dataFileLoc)
-	types := ReadJson(typeFileLoc)
+	datasetJson := ReadJson(dataFileLoc)
+	typesJson := ReadJson(typeFileLoc)
 	var s []Output
-	patterns := []string {
-											"XXXX XXXX XXXX XXXX",
-										  "XXXX XXXX XXXX",
-										  "XXXX XXXX'",
-										  "XXXX",
-										  "XX/XX/XXXX",
-										  "XX/XX/",}
+	patterns := []string{
+		"XXXX XXXX XXXX XXXX",
+		"XXXX XXXX XXXX",
+		"XXXX XXXX'",
+		"XXXX",
+		"XX/XX/XXXX",
+		"XX/XX/"}
 
-	for i := 0; i < len(dataset.Data); i++ {
-			var obj Output
-			entry := dataset.Data[i]
+	for i := 0; i < len(datasetJson.Data); i++ {
+		var obj Output
+		var entity string
+		var types string
+		found := false
+		entry := datasetJson.Data[i]
+		fmt.Println("Entry No: ", i)
 
-			var re = regexp.MustCompile(`XXXX`)
-			replace := re.ReplaceAllString(entry, `YYYYYYYYYYYYY`)
+		doc, _ := prose.NewDocument(entry)
+		for _, ent := range doc.Entities() {
 
-			doc, _ := prose.NewDocument(entry)
-	 		for _, ent := range doc.Entities() {
+			if InArray(ent.Text, patterns) {
 
-			 if InArray(ent.Text, patterns) {
-				 switch ent.Label {
-				 case "PERSON":
-					 	obj.Types = types.Data[5]
-				 case "ORGANIZATION":
-					 obj.Types = types.Data[19] + " " + types.Data[20]
-				 case "GPE":
-					 obj.Types = types.Data[19] + " " + types.Data[20]
-				 }
-
-
-			 }else{
-				  obj.Types = "Types"
-			 }
-
+				switch ent.Label {
+				case "PERSON":
+					types = typesJson.Data[5]
+					entity = RandomStr(typesJson.Data[5])
+				case "ORGANIZATION":
+					types = typesJson.Data[19] + " " + typesJson.Data[20]
+					entity = RandomStr(typesJson.Data[19])
+				case "GPE":
+					types = typesJson.Data[19] + " " + typesJson.Data[20]
+					entity = RandomStr(typesJson.Data[19])
+				}
+				found = true
 			}
+		}
 
-			obj.Text = replace
-			obj.Entity = "Entity"
+		if !found {
+			ran := rand.Intn(len(typesJson.Data))
+			types = typesJson.Data[ran]
+			entity = RandomStr(types)
+		}
 
-			s = append(s, obj)
+		obj.Text = Replace(entry, entity)
+		obj.Entity = entity
+		obj.Types = types
+		s = append(s, obj)
 	}
 
 	CreateJson(s)
