@@ -1,0 +1,49 @@
+{
+ "DataAvatarGo": [
+  {
+   "text": "Let me explain to you why I believe this : For years, SunTrust advertised and promoted in big letters their XXXX XXXX debit card.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "With that card, an account holder could earn XXXX mile for every {$1.00} spent ( for debit and credit card transactions ).",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "Over the past XXXX months, SunTrust must have reviewed their debit card portfolio and what they did as a result of their review is shocking : They closed all account holders who had earned above average number of miles regardless of the types of products they purchased, regardless of the length of their relationship with SunTrust, and regardless of the amount of money in their checking accounts.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "After banking with Citibank for over 3 years, I discovered this evening that I could not use my debit card despite having a Citibank verified balance of {$900.00}. When I called Citibank, I was informed that the Texas branches had been bought by XXXX XXXX XXXX and as such, they, Citibank, could not allow access to my account.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "I used to work for the XXXX XXXX XXXX XXXX and they call their customers because a {$1.00} coffee.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "After that call she informed me that the bank had a policy of not exchanging XXXX with a value of less than {$100.00} U.S.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "In response, I told this associate that I inquired about returning XXXX when I picked it up, and no one told me about this requirement.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "He told me that he checked out my exchange issue, and found that PNC had a policy of not exchanging XXXX with a value of less than {$100.00} U.S., and they could not make exceptions to this policy.",
+   "entity": "Entity",
+   "types": "Types"
+  },
+  {
+   "text": "I told XXXX that I viewed this failure as additional negligence on the part of the bank.",
+   "entity": "Entity",
+   "types": "Types"
+  }
+ ]
+}
