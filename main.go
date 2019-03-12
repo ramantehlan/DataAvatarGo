@@ -16,6 +16,7 @@ import (
 
 var dataFileLoc string = "data/sliceDataset.json"
 var typeFileLoc string = "data/types.json"
+var submissionFileLoc string = "submission.json"
 
 func main() {
 	fmt.Println("DataAvatarGo Started!\n")
@@ -25,13 +26,22 @@ func main() {
 	// conver to the byte code
 	dataset := ReadJson(dataFileLoc)
 	//types := ReadJson(typeFileLoc)
+	var s []Output
 
 	for i := 0; i < len(dataset.Data); i++ {
+		var obj Output
 			entry := dataset.Data[i]
 			doc, _ := prose.NewDocument(entry)
 	 		for _, ent := range doc.Entities() {
 			 fmt.Println(ent.Text, ent.Label)
 	 		}
+
+			obj.Text = dataset.Data[i]
+			obj.Entity = "Entity"
+			obj.Types = "Types"
+
+			s = append(s, obj)
 	}
 
+	CreateJson(s)
 }
