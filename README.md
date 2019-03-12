@@ -41,19 +41,21 @@ Write about usage here
 │   ├── documents.json
 │   └── types.json
 ├── DataAvatarGo
+├── submission.json
 ├── main.go
 └── README.md
 ```
 
 No | File/Folder Name | Purpose |
 ---|------------------|---------|
-1 | `Data` | folder to store all the json files
-2 | `dataset.json` | Data set provided
-3 | `document.json` | Original file from which the dataset is created
-4 | `types.json` | Few selected PDEs types to recognize
-5 | `all_pde_types.json` | All the provided PDEs types
-6 | `README.md` | Current file you are reading
-7 | `main.go` | Main file for the program
+1 | `submission.json` | This is the final result file, which is to be submitted
+2 | `Data` | folder to store all the json files
+3 | `dataset.json` | Data set provided
+4 | `document.json` | Original file from which the dataset is created
+5 | `types.json` | Few selected PDEs types to recognize
+6 | `all_pde_types.json` | All the provided PDEs types
+7 | `README.md` | Current file you are reading
+8 | `main.go` | Main file for the program
 
 ## Why Go Language?
 
