@@ -10,51 +10,28 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"os"
+	"gopkg.in/jdkato/prose.v2"
 )
 
 var dataFileLoc string = "data/sliceDataset.json"
-
-//var typeFileLoc string = "/data/types.json"
-
-// Structure of dataset.json
-type InputData struct {
-	inputData []string `json:"inputData"`
-}
-
-// Structure of types.json
-type TypeData struct {
-	typeData []string `json:"typeData"`
-}
-
-// Structure of submission.json
-type OutputData struct {
-	outputData []output `json:"outputData"`
-}
-
-// Structure of single entry is submission.json
-type Output struct {
-	text   string `json:"text"`
-	entity string `json:"entity"`
-	types  string `json:"types"`
-}
+var typeFileLoc string = "data/types.json"
 
 func main() {
 	fmt.Println("DataAvatarGo Started!\n")
 	defer fmt.Println("\nDataAvatarGo Ending!")
 
-	// Step1 :Load dataset
-	dataFile, err := os.Open(dataFileLoc)
-	// If error in opening the file, handle here
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println("Success in opening data file: " + dataFileLoc)
-	}
-	// Close the file in end
-	defer dataFile.Close()
+	// Step 1: Read the input json file
+	// conver to the byte code
+	dataset := ReadJson(dataFileLoc)
+	//types := ReadJson(typeFileLoc)
 
-	// Step 2: Parse dataset
+	for i := 0; i < len(dataset.Data); i++ {
+			entry := dataset.Data[i]
+			doc, _ := prose.NewDocument(entry)
+	 		for _, ent := range doc.Entities() {
+			 fmt.Println(ent.Text, ent.Label)
+	 		}
+	}
+
 }
