@@ -103,4 +103,4 @@ You may find many of the features crucial, but you can still code your applicati
 
 ## License
 
-`Not yet added`
+GNU General Public License v3.0
